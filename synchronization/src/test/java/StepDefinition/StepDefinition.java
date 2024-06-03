@@ -24,7 +24,7 @@ public class StepDefinition {
 
 	@Given("user open the AppXcelerate website with given URL...BrowserInitialization:browserIntialization")
 	public void user_open_the_app_xcelerate_website_with_given_url_url_provied_appx() throws IOException {
-		BrowserInitialization browser=new BrowserInitialization();
+		BrowserInitialization browser = new BrowserInitialization();
 		driver = browser.browserIntialization("Browser");
 	}
 
@@ -50,13 +50,13 @@ public class StepDefinition {
 		footer = new FooterXpath(driver);
 		footer.validateFooterXpath();
 	}
-	
+
 	@Then("close the browser...Close:CloseBrowser")
 	public void close_the_browser_close_CloseBrowser() {
-		close=new Close();
+		close = new Close();
 		try {
-		close.CloseBrowser(driver);
-		}catch (Exception e) {
+			close.CloseBrowser(driver);
+		} catch (Exception e) {
 		}
 	}
 
